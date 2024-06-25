@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms Image</title>
+
+    <style>
+      #image {
+          width: 200px;
+          transition: transform 0.5s ease-in-out;
+          margin-top: 100px;
+          margin-left: 100px;
+          border: 2px solid rgb(255, 255, 255);
+          
+          border-radius: 50%;
+      }
+      .button-container {
+          margin-top: 150px;
+      }
+      .transform-button {
+          margin-right: 30px;
+          padding: 10px;
+          text-decoration: solid;
+          border: darkgray;
+          cursor: pointer;
+          background-color: rgb(139, 170, 45);
+          border-radius: 3px;
+          color: white;
+      }
+      #scale:target ~ #image {
+          transform: scale(1.5);
+      }
+      #rotate:target ~ #image {
+          transform: rotate(45deg);
+      }
+      #skew:target ~ #image {
+          transform: skew(20deg, 20deg);
+      }
+      #translate:target ~ #image {
+          transform: translate(-50px, 50px);
+      }
+      h1{
+        color: rgb(9, 10, 9);
+        width: 50%;
+        background-color: white;
+      }
+  </style>
+</head>
+<body style="background-image: url(./bd\ cat.jpg);">
+  <center><div class="button-container">
+    <h1>Transform Image</h1>
+   
+    <a id="scale-link" class="transform-button" href="#scale">Scale</a>
+    <a id="rotate-link" class="transform-button" href="#rotate">Rotate</a>
+    <a id="skew-link" class="transform-button" href="#skew">Skew</a>
+    <a id="translate-link" class="transform-button" href="#translate">Translate</a>
+</div>
+<div id="scale"></div>
+<div id="rotate"></div>
+<div id="skew"></div>
+<div id="translate"></div>
+<img id="image" src="./img.jpg" alt="Image"></center>    
+</body>
+</html>
